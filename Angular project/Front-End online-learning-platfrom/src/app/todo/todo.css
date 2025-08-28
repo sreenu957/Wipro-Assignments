@@ -1,0 +1,22 @@
+.classroom-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  max-width: 600px;
+}
+
+.classroom-header, .classroom-row {
+  display: grid;
+  grid-template-columns: 60px 150px 200px 100px;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+}
+
+.classroom-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.classroom-row:nth-child(even) {
+  background-color: #fafafa;
+}

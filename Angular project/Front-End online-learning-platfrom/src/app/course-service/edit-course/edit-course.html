@@ -1,0 +1,15 @@
+<h1>Edit Course</h1>
+  <form>
+    <label>Enter Title</label>
+    <input type="text" name="title" id="title" placeholder="Enter title" [(ngModel)]="course.title"><br/>
+    <label>Enter Description</label>
+    <textarea type="description" name="description" id="description" [(ngModel)]="course.description"></textarea><br>
+    <label>Enter Duration</label>
+    <input type="text" name="duration" id="duration" [(ngModel)]="course.duration"><br>
+    <label>Enter CreatedAt</label>
+    <input type="datetime-local" name="createAt" id="createdAt" [(ngModel)]="course.createdAt"><br>
+    <div class="button-row">
+      <button type="submit" name="submit" id="submit" (click)="onSubmit()">Add Course</button>
+      <button type="reset" name="reset" id="reset" value="Reset">Reset</button>
+    </div>
+  </form>

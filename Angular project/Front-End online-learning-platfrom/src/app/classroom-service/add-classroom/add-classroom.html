@@ -1,0 +1,19 @@
+<div>
+    <h1>Add Classroom</h1>
+  <form>
+      <label>Enter Classroom Name</label>
+      <input type="text" name="name" id="name" placeholder="Enter classroom name"  [(ngModel)]="classroom.name"> <br>
+      <label>Enter Classroom Location</label>
+      <input type="text" name="location" id="location" [(ngModel)]="classroom.location"> <br>
+      <label>Enter Classroom Capacity</label>
+      <input type="number" name="capacity" id="capacity" [(ngModel)]="classroom.capacity"><br>
+       <label>Enter Classroom Type</label>
+      <input type="text" name="type" id="type" [(ngModel)]="classroom.type">
+    <button type="submit" name="submit" id="submit" (click)="onSubmit()">Add </button> 
+    <button type="reset" name="reset" id="reset" value="Reset">Reset</button>
+  </form>
+  <p>{{message}}</p>
+  <button><a href="/classroom">Back to Classroom Menu</a></button> <br/>
+<button><a href="">Back To Main Menu</a></button> <br/>
+
+</div>

@@ -1,0 +1,39 @@
+<h2>All Courses</h2>
+
+<div *ngIf="errorMessage" style="color: red;">
+  {{ errorMessage }}
+</div>
+
+<div>
+  Total courses: {{ courses.length }}
+</div>
+
+<div *ngIf="!courses.length && !errorMessage">
+  Loading 
+  ...
+</div>
+
+<div *ngIf="courses.length > 0" class="courses-list">
+  <div class="courses-header">
+    <strong style="margin-left: 50px;">Id</strong>
+    <strong style="margin-left: 50px;">Title</strong>
+    <strong style="margin-left: 50px;">Description</strong>
+    <strong style="margin-left: 50px;">Duration</strong>
+    <strong style="margin-left: 50px;">CreatedAt</strong>
+  </div>
+
+  <div *ngFor="let course of courses" class="course-row">
+    <div>{{ course.id }}</div>
+    <div>{{ course.title }}</div>
+    <div>{{ course.description }}</div>
+    <div>{{ course.duration }}</div>
+    <div>{{ course.createdAt }}</div>
+    <div> <button (click)="editCourse(course.id)">Edit </button></div>
+     <div> <button (click)="deleteCourse(course.id)">Delete </button></div>
+  </div>
+</div>
+
+<br />
+
+<button><a href="/add-course">Add Course</a></button> |
+<button><a href=" ">Back To Main Menu</a></button>

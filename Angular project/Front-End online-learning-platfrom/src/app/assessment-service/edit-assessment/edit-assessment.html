@@ -1,0 +1,17 @@
+<h2>Edit Assessment</h2>
+  <form>
+      <label>Enter Title</label>
+      <input type="text" name="title" id="title" placeholder="Enter title"  [(ngModel)]="assessment.title"> <br>
+      <label>Enter Description</label>
+      <input type="text" name="description" id="description" [(ngModel)]="assessment.description"> <br>
+      <label>Enter Total Marks</label>
+      <input type="number" name="totalMarks" id="totalMarks" [(ngModel)]="assessment.totalMarks"><br>
+       <label>Enter Deadline</label>
+      <input type="datetime-local" name="deadline" id="deadline" [(ngModel)]="assessment.deadline"> <br>
+      <label>Enter CreatedAt</label>
+      <input type="datetime-local" name="createdAt" id="createdAt" [(ngModel)]="assessment.createdAt"> <br>
+<br/> <br/>
+          <button type="submit" name="submit" id="submit" (click)="onSubmit()">Update </button> &nbsp; &nbsp;
+      <button type="reset" name="reset" id="reset" value="Reset">Reset</button> 
+</form>
+

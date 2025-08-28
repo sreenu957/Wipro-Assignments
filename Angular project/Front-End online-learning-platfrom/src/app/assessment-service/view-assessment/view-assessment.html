@@ -1,0 +1,42 @@
+<h2>All Assessments</h2>
+
+<div *ngIf="errorMessage" style="color: red;">
+  {{ errorMessage }}
+</div>
+
+<div>
+  Total assessments: {{ assessments.length }}
+</div>
+
+<div *ngIf="!assessments.length && !errorMessage">
+  Loading 
+  ...
+</div>
+<input type="text"  [(ngModel)]="message" (change)="onChange()"  />
+
+<div *ngIf="assessments.length > 0" class="assessment-list">
+  <div class="assessment-header">
+    <strong>ID</strong>
+    <strong>TITLE</strong>
+    <strong>DESCRIPTION</strong>
+    <strong>TOTAL MARKS</strong>
+    <strong>DEADLINE</strong>
+    <strong>CREATED AT</strong>
+  </div>
+
+  <div *ngFor="let assessment of assessments" class="assessment-row">
+    <div>{{ assessment.id }}</div>
+    <div>{{ assessment.title }}</div>
+    <div>{{ assessment.description }}</div>
+    <div>{{ assessment.totalMarks }}</div>
+    <div>{{ assessment.deadline }}</div>
+    <div>{{ assessment.createdAt }}</div>
+    <div> <button (click)="editAssessment(assessment.id)">Edit </button></div>
+     <div> <button (click)="deleteAssessment(assessment.id)">Delete </button></div>
+  </div>
+</div>
+
+<br />
+
+<a [routerLink]="['/add-assessment']">Add Assessment</a> |
+<a [routerLink]="['/']">Back To Main Menu</a>

@@ -1,0 +1,34 @@
+<h2>All Todos</h2>
+
+<div>
+  Total Todos: {{ todos.length }}
+</div>
+
+<div *ngIf="!todos.length">
+  Loading 
+  ...
+</div>
+
+<div *ngIf="todos.length > 0" class="classroom-list">
+  <div class="classroom-header">
+    <strong>ID</strong>
+    <strong>USERID</strong>
+    <strong>TITLE</strong>
+    <strong>completed</strong>
+      </div>
+      <hr/>
+
+  <div *ngFor="let todo of todos" class="classroom-row">
+    <div>{{ todo.id }}</div>
+    <div>{{ todo.userId }}</div>
+    <div>{{ todo.title }}</div>
+    <div>{{ todo.completed }}</div>
+    <hr/>
+    
+  </div>
+</div>
+
+<br />
+
+<a href="/add-classroom">Add Classroom</a> |
+<a href="/">Back To Main Menu</a>

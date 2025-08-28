@@ -1,0 +1,23 @@
+<div>
+    <h1>Add Assessment</h1>
+  <form>
+      <label>Course ID</label>
+      <input type="number" [(ngModel)]="selectedCourseId" name="courseId" required />
+      <label>Enter Assessment Title</label>
+      <input type="text" name="title" id="title" placeholder="Enter Assessment Title"  [(ngModel)]="assessment.title"> <br>
+      <label>Enter Assessment Description</label>
+      <textarea type="text" name="description" id="description" [(ngModel)]="assessment.description"></textarea> <br>
+      <label>Enter Assessment Total Marks</label>
+      <input type="number" name="totalMarks" id="totalMarks" [(ngModel)]="assessment.totalMarks"><br>
+       <label>Enter Assessment Deadline</label>
+      <input type="datetime-local" name="deadline" id="deadline" [(ngModel)]="assessment.deadline">
+      <label>Enter Assessment CreatedAt</label>
+      <input type="datetime-local" name="createdAt" id="createdAt" [(ngModel)]="assessment.createdAt">
+    <button type="submit" name="submit" id="submit" (click)="onSubmit()">Add </button> 
+    <button type="reset" name="reset" id="reset" value="Reset">Reset</button>
+  </form>
+  <p>{{message}}</p>
+  <button><a href="/assessments">Back to Assessment Menu</a></button> <br/>
+<button><a href="">Back To Main Menu</a></button> <br/>
+
+</div>

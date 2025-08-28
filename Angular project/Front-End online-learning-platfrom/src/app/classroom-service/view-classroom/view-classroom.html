@@ -1,0 +1,40 @@
+<h2>All Classrooms</h2>
+
+<div *ngIf="errorMessage" style="color: red;">
+  {{ errorMessage }}
+</div>
+
+<div>
+  Total classrooms: {{ classrooms.length }}
+</div>
+
+<div *ngIf="!classrooms.length && !errorMessage">
+  Loading 
+  ...
+</div>
+<input type="text"  [(ngModel)]="message" (change)="onChange()"  />
+
+<div *ngIf="classrooms.length > 0" class="classroom-list">
+  <div class="classroom-header">
+    <strong>ID</strong>
+    <strong>Name</strong>
+    <strong>Location</strong>
+    <strong>Capacity</strong>
+    <strong>Type</strong>
+  </div>
+
+  <div *ngFor="let classroom of classrooms" class="classroom-row">
+    <div>{{ classroom.id }}</div>
+    <div>{{ classroom.name }}</div>
+    <div>{{ classroom.location }}</div>
+    <div>{{ classroom.capacity }}</div>
+    <div>{{ classroom.type }}</div>
+    <div> <button (click)="editClassroom(classroom.id)">Edit </button></div>
+     <div> <button (click)="deleteClassroom(classroom.id)">Delete </button></div>
+  </div>
+</div>
+
+<br />
+
+<a href="/add-classroom">Add Classroom</a> |
+<a href="/">Back To Main Menu</a>

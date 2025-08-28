@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background with gradient overlay */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Purple to Blue */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #333;
+}
+
+/* Card Container */
+.add-user-container {
+  width: 500px;
+  background: #fff;
+  padding: 40px 45px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+.add-user-container h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Labels */
+.add-user-container label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Inputs */
+.add-user-container input[type="text"],
+.add-user-container input[type="email"],
+.add-user-container input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.add-user-container input:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.5);
+}
+
+/* Button Row */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Add & Reset Buttons */
+.add-user-container button,
+.add-user-container input[type="submit"] {
+  flex: 1;
+  padding: 14px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Add button */
+#submit {
+  background: #28a745;
+}
+
+#submit:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* Reset button */
+#reset {
+  background: #dc3545;
+}
+
+#reset:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+/* Links section */
+.links {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.links button {
+  background: #007BFF;
+  padding: 12px 22px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.links button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Message */
+.add-user-container p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #444;
+}
